@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Scratch — Urban Hiking (Isaac)</title>
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+
+  <!-- simple nav back to professional pages -->
+  <nav class="scratch-nav">
+    <a href="index.html">Home</a> | <a href="resume.html">Resume</a> | <a href="app.html">Web App</a>
+  </nav>
+
+  <!-- Anchor target -->
+  <h1 id="top">Urban Hiking — My Scratch Page</h1>
+
+  <!-- 3 divs for positioning/styling -->
+  <div class="hero">
+    <h2>Why I hike the city</h2>
+    <p>I love exploring neighborhoods, finding views, and tracking distance. This page demonstrates required HTML/CSS features for the Web Dev final.</p>
+  </div>
+
+  <div class="media-block">
+    <!-- image not from bootstrap theme -->
+    <img src="assets/images/hobby-photo.jpg" alt="Urban hike" class="hobby-image">
+
+    <div class="video">
+      <h3>Short urban hike video</h3>
+      <!-- embedded YouTube video: replace VIDEO_ID_HERE with an actual id -->
+      <iframe width="420" height="236" src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+        title="Urban hike" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <p>Tip: replace VIDEO_ID_HERE with the YouTube video's id (the part after "v=").</p>
+    </div>
+  </div>
+
+  <!-- ordered list containing an unordered list (requirement) -->
+  <ol>
+    <li>Packing list:
+      <ul>
+        <li>Water</li>
+        <li>Phone + headphones</li>
+        <li>Comfortable shoes</li>
+      </ul>
+    </li>
+    <li>Favorite routes</li>
+    <li>Safety tips</li>
+  </ol>
+
+  <!-- On-page anchor link back to top -->
+  <p><a href="#top">Back to top</a></p>
+
+  <!-- Tableau embed block (live and interactive) -->
+  <div class="tableau-block">
+    <h3>Interactive Tableau Visualization</h3>
+    <!-- REPLACE the src below with a real Tableau Public embedded URL -->
+    <iframe src="https://public.tableau.com/views/YOUR_VIZ_NAME/Sheet1?:showVizHome=no&:embed=true"
+      width="900" height="700" frameborder="0"></iframe>
+    <p class="small">Replace the iframe src with the embed code you get from Tableau Public.</p>
+  </div>
+
+  <!-- link to single-file web app -->
+  <p><a href="app.html">Try my Riddle Generator web app</a></p>
+
+</body>
+</html>

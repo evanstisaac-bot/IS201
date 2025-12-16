@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Isaac Evans — Portfolio</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- small custom tweaks (optional) -->
+  <style>
+    .hero {
+      background: linear-gradient(90deg,#0d6efd22,#6f42c122);
+      border-radius: 12px;
+      padding: 28px;
+    }
+    .rounded-card { border-radius: 12px; box-shadow: 0 6px 18px rgba(15,15,30,0.06); }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Isaac Evans</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navCollapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume (HTML)</a></li>
+          <li class="nav-item"><a class="nav-link" href="scratch.html">Scratch Page</a></li>
+          <li class="nav-item"><a class="nav-link" href="app.html">Web App</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <div class="hero rounded-card">
+          <h1 class="mb-1">Isaac Evans</h1>
+          <p class="lead mb-0">Finance student at Brigham Young University — aspiring commercial real estate professional. This site contains my HTML résumé, a from-scratch hobby page, and a small web app built as part of my Web Development final.</p>
+        </div>
+      </div>
+      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+        <img src="assets/images/profile.jpg" alt="Isaac profile" style="width:130px;height:130px;object-fit:cover;border-radius:10px;">
+      </div>
+    </div>
+  </header>
+
+  <main class="container mb-5">
+    <section class="row g-4">
+      <div class="col-md-6">
+        <div class="p-4 rounded-card">
+          <h3>Resume</h3>
+          <p>HTML résumé with education, experience, and skills. Accessible from the nav or <a href="resume.html">click here</a>.</p>
+          <a class="btn btn-outline-primary" href="resume.html">View Resume</a>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 rounded-card">
+          <h3>From-scratch page</h3>
+          <p>A page created from a blank HTML file demonstrating nested lists, an image, an embedded YouTube video, an embedded Tableau viz, and an on-page anchor.</p>
+          <a class="btn btn-outline-success" href="scratch.html">Open Scratch Page</a>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 rounded-card">
+          <h3>Mini Web App</h3>
+          <p>Small single-file web app (riddle generator) built during the course.</p>
+          <a class="btn btn-outline-secondary" href="app.html">Try the App</a>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 rounded-card">
+          <h3>GitHub</h3>
+          <p>Hosted on GitHub Pages. Add links to your LinkedIn / GitHub here when ready.</p>
+          <a class="btn btn-outline-dark" href="#" id="ghLink">My GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-light py-3">
+    <div class="container text-muted small">Built for BYU Web Dev Final • Hosted on GitHub Pages</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

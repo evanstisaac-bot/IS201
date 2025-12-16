@@ -1,0 +1,65 @@
+/* custom.css for scratch.html (from-scratch stylesheet) */
+
+/* base font + color */
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f6fbff;   /* custom background color requirement */
+  color: #1b2330;              /* font color requirement */
+  margin: 20px;
+  line-height: 1.45;
+}
+
+/* 1) hero div */
+.hero {
+  background: linear-gradient(180deg, #ffffff, #eef6ff);
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #e2eefb;
+}
+
+/* 2) media-block div */
+.media-block {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+/* image styling */
+.hobby-image {
+  width: 320px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #d6e7ff;
+  object-fit: cover;
+}
+
+/* video container (second div) */
+.video {
+  max-width: 560px;
+}
+
+/* tableau block (third div) */
+.tableau-block {
+  margin-top: 20px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e6eef7;
+}
+
+/* link styles */
+a { color: #0b5cff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* small nav at top */
+.scratch-nav { margin-bottom: 14px; }
+.scratch-nav a { margin-right: 8px; color:#333; }
+
+/* responsive: stack media block on narrow screens */
+@media (max-width:800px) {
+  .media-block { flex-direction: column; align-items:center; }
+  .hobby-image { width:90%; max-width:420px; }
+  .video { width:100%; }
+}

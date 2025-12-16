@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Riddle Generator — Web App</title>
+  <style>
+    body{font-family: Arial, Helvetica, sans-serif; padding:24px; background:#f9fbff;}
+    .card{max-width:760px;margin:auto;background:#fff;padding:20px;border-radius:12px;box-shadow:0 8px 24px rgba(12,20,40,0.06);}
+    h1{margin-top:0;}
+    #riddle{margin-top:12px;font-size:1.05rem;padding:8px;border-left:3px solid #0d6efd;background:#f3f7ff;border-radius:6px;}
+    .controls{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;}
+    input[type="text"]{flex:1;padding:8px;border-radius:6px;border:1px solid #ccd;}
+    button{padding:8px 12px;border-radius:6px;border:1px solid #bfc9e7;background:#fff;}
+    .feedback{margin-top:10px;font-weight:600;}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Riddle Generator</h1>
+    <p>Click "New Riddle" to get a random riddle. Type your answer and press "Check". This is a single-file app (HTML/CSS/JS together).</p>
+
+    <div class="controls">
+      <button id="newRiddle">New Riddle</button>
+      <button id="giveHint">Hint</button>
+      <button id="showAnswer">Show Answer</button>
+    </div>
+
+    <div id="riddle">Press "New Riddle" to start.</div>
+
+    <div class="controls" style="margin-top:14px;">
+      <input id="answer" type="text" placeholder="Type your answer here (no punctuation)"/>
+      <button id="check">Check</button>
+    </div>
+
+    <div class="feedback" id="feedback"></div>
+    <p style="margin-top:12px;"><a href="scratch.html">Back to scratch page</a></p>
+  </div>
+
+  <script>
+    const riddles = [
+      {q:"I speak without a mouth and hear without ears. I have nobody, but I come alive with wind. What am I?", a:"echo", hint:"Repeated sound."},
+      {q:"I’m tall when I’m young, and I’m short when I’m old. What am I?", a:"candle", hint:"You light me."},
+      {q:"What has keys but can’t open locks?", a:"piano", hint:"It makes music."},
+      {q:"What runs, but never walks; has a bed, but never sleeps?", a:"river", hint:"A natural water flow."},
+      {q:"I have cities, but no houses; forests, but no trees; and water, but no fish. What am I?", a:"map", hint:"You use me to navigate."}
+    ];
+
+    let current = null;
+    const riddleEl = document.getElementById('riddle');
+    const feedback = document.getElementById('feedback');
+    const answerInput = document.getElementById('answer');
+
+    function norm(s){ return s.replace(/[^a-z0-9\s]/gi,'').trim().toLowerCase(); }
+
+    document.getElementById('newRiddle').addEventListener('click', ()=>{
+      current = riddles[Math.floor(Math.random()*riddles.length)];
+      riddleEl.textContent = current.q;
+      feedback.textContent = '';
+      answerInput.value = '';
+      answerInput.focus();
+    });
+
+    document.getElementById('check').addEventListener('click', ()=>{
+      if(!current){ feedback.textContent = "Press 'New Riddle' first."; return; }
+      const guess = norm(answerInput.value || '');
+      if(!guess){ feedback.textContent = "Type an answer before checking."; return; }
+      if(guess === norm(current.a)) {
+        feedback.textContent = "Correct! 🎉";
+      } else {
+        feedback.textContent = "Not quite. Try again or press Hint.";
+      }
+    });
+
+    document.getElementById('giveHint').addEventListener('click', ()=>{
+      if(!current){ feedback.textContent = "Press 'New Riddle' first."; return; }
+      feedback.textContent = "Hint: " + current.hint;
+    });
+
+    document.getElementById('showAnswer').addEventListener('click', ()=>{
+      if(!current){ feedback.textContent = "Press 'New Riddle' first."; return; }
+      feedback.textContent = "Answer: " + current.a;
+    });
+
+    // keyboard Enter to check
+    answerInput.addEventListener('keydown', (e)=>{ if(e.key === 'Enter') document.getElementById('check').click(); });
+  </script>
+</body>
+</html>
