@@ -1,67 +1,116 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Scratch — Urban Hiking (Isaac)</title>
+  <meta charset="UTF-8">
+  <title>Scratch Page – Isaac Evans</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Custom CSS (from scratch) -->
   <link rel="stylesheet" href="custom.css">
 </head>
+
 <body>
 
-  <!-- simple nav back to professional pages -->
+  <!-- Navigation back to professional pages -->
   <nav class="scratch-nav">
-    <a href="index.html">Home</a> | <a href="resume.html">Resume</a> | <a href="app.html">Web App</a>
+    <a href="index.html">Home</a> |
+    <a href="resume.html">Resume</a> |
+    <a href="app.html">Web App</a>
   </nav>
 
   <!-- Anchor target -->
-  <h1 id="top">Urban Hiking — My Scratch Page</h1>
+  <h1 id="top">My Scratch Page: NFL Fandom & Data</h1>
 
-  <!-- 3 divs for positioning/styling -->
+  <!-- DIV #1 -->
   <div class="hero">
-    <h2>Why I hike the city</h2>
-    <p>I love exploring neighborhoods, finding views, and tracking distance. This page demonstrates required HTML/CSS features for the Web Dev final.</p>
+    <h2>Why the NFL is interesting to me</h2>
+    <p>
+      I’ve always been fascinated by how sports fandom varies across the United States.
+      This page demonstrates my ability to write HTML and CSS from scratch while exploring
+      NFL popularity data.
+    </p>
   </div>
 
+  <!-- DIV #2 -->
   <div class="media-block">
-    <!-- image not from bootstrap theme -->
-    <img src="assets/images/hobby-photo.jpg" alt="Urban hike" class="hobby-image">
+
+    <!-- Image (not from Bootstrap) -->
+    <img src="assets/images/hobby-photo.jpg" alt="NFL Stadium" class="hobby-image">
 
     <div class="video">
-      <h3>Short urban hike video</h3>
-      <!-- embedded YouTube video: replace VIDEO_ID_HERE with an actual id -->
-      <iframe width="420" height="236" src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-        title="Urban hike" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-      <p>Tip: replace VIDEO_ID_HERE with the YouTube video's id (the part after "v=").</p>
+      <h3>NFL Highlight Video</h3>
+      <!-- Embedded YouTube video -->
+      <iframe width="420" height="236"
+        src="https://www.youtube.com/embed/7pVfBW6sYjw"
+        title="NFL Highlights"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
+
   </div>
 
-  <!-- ordered list containing an unordered list (requirement) -->
+  <!-- Nested list requirement -->
+  <h3>What makes NFL fandom unique</h3>
   <ol>
-    <li>Packing list:
+    <li>Regional loyalty
       <ul>
-        <li>Water</li>
-        <li>Phone + headphones</li>
-        <li>Comfortable shoes</li>
+        <li>Family traditions</li>
+        <li>Local team success</li>
+        <li>Historical rivalries</li>
       </ul>
     </li>
-    <li>Favorite routes</li>
-    <li>Safety tips</li>
+    <li>Media influence</li>
+    <li>Star players</li>
   </ol>
 
-  <!-- On-page anchor link back to top -->
+  <!-- On-page anchor link -->
   <p><a href="#top">Back to top</a></p>
 
-  <!-- Tableau embed block (live and interactive) -->
+  <!-- DIV #3: Tableau visualization -->
   <div class="tableau-block">
     <h3>Interactive Tableau Visualization</h3>
-    <!-- REPLACE the src below with a real Tableau Public embedded URL -->
-    <iframe src="https://public.tableau.com/views/YOUR_VIZ_NAME/Sheet1?:showVizHome=no&:embed=true"
-      width="900" height="700" frameborder="0"></iframe>
-    <p class="small">Replace the iframe src with the embed code you get from Tableau Public.</p>
-  </div>
 
-  <!-- link to single-file web app -->
-  <p><a href="app.html">Try my Riddle Generator web app</a></p>
+    <!-- LIVE TABLEAU EMBED -->
+    <div class='tableauPlaceholder' id='viz1765868667305' style='position: relative'>
+      <noscript>
+        <a href='#'>
+          <img alt='Most Popular NFL Teams by County'
+            src='https://public.tableau.com/static/images/US/USCountiesNFLMap/NFLTeamsCountyMap/1_rss.png'
+            style='border: none' />
+        </a>
+      </noscript>
+
+      <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='USCountiesNFLMap/NFLTeamsCountyMap' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image'
+          value='https://public.tableau.com/static/images/US/USCountiesNFLMap/NFLTeamsCountyMap/1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+      </object>
+    </div>
+
+    <script type='text/javascript'>
+      var divElement = document.getElementById('viz1765868667305');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+      vizElement.style.width = '100%';
+      vizElement.style.height = '700px';
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+
+  </div>
 
 </body>
 </html>
